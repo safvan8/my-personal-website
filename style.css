@@ -1,12 +1,19 @@
+/***********************************
+        PAGE HEADER
+************************************/
+
+/* Sets the background color for custom header and footer */
 .custom-header-background,
 .custom-footer-background {
   background-color: #086d6b;
 }
 
+/* Adds a highlight effect to text */
 .highlight-text {
   position: relative;
 }
 
+/* Creates a translucent overlay behind the highlighted text */
 .highlight-text::before {
   content: "";
   position: absolute;
@@ -18,9 +25,10 @@
   /* Adjust the background color and transparency as needed */
   z-index: -1;
   box-shadow: 0 0 10px rgba(8, 109, 107, 0.8);
-  /* Adjust the box shadow color and spread radius as needed */
+  /* Adds a shadow effect to the highlighted text */
 }
 
+/* Styles links within the highlighted text */
 .highlight-text a {
   position: relative;
   color: transparent;
@@ -28,9 +36,7 @@
   /* Adjust the stroke color and thickness as needed */
 }
 
-
-
-
+/* Styles for the about me section text */
 .custom-text-about-me {
   font-family: Consolas;
   font-size: 1.00rem;
@@ -40,14 +46,16 @@
   margin: 0;
   overflow: hidden;
   animation: typing 4s steps(40) infinite;
-
+  /* Applies an animation effect to simulate typing */
 }
 
+/* Styles for the home section background */
 .home-section-background {
   padding-top: 7rem;
   background-image: url('images/home-background-image.jpg');
   background-size: cover;
   background-position: center;
+  /* Sets a background image for the home section */
 }
 
 .safvan-profile-image {
@@ -57,12 +65,24 @@
   width: 13rem;
 }
 
+
+
+/***********************************
+        BODY
+************************************/
+
+
 .services-skills-experiences {
   padding-top: 7rem;
   background-image: url('images/backgorod-coverr-image.jpg');
   background-size: cover;
   background-position: center;
 }
+
+
+/***********************************
+        PAGE FOOTER
+************************************/
 
 
 .social-icons {
