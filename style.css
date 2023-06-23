@@ -11,6 +11,7 @@
 /* Adds a highlight effect to text */
 .highlight-text {
   position: relative;
+  display: inline-block; /* Ensures that the highlight box expands to fit the text */
 }
 
 /* Creates a translucent overlay behind the highlighted text */
@@ -18,23 +19,34 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -0.3em; /* Adjust the left offset to align the highlight with the text */
+  right: -0.3em; /* Adjust the right offset to align the highlight with the text */
   bottom: 0;
   background-color: rgba(8, 109, 107, 0.8);
   /* Adjust the background color and transparency as needed */
   z-index: -1;
-  box-shadow: 0 0 10px rgba(8, 109, 107, 0.8);
+  box-shadow: 0 0 0.3em rgba(8, 109, 107, 0.8);
   /* Adds a shadow effect to the highlighted text */
+  border-radius: 0.2em; /* Adds rounded corners to the highlight box */
 }
 
 /* Styles links within the highlighted text */
 .highlight-text a {
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 2px #FFFFFF;
+  -webkit-text-stroke: 0.05em #FFFFFF;
   /* Adjust the stroke color and thickness as needed */
 }
+
+/* Increases the size of the highlight layer on small devices */
+@media (max-width: 36em) {
+  .highlight-text::before {
+    left: -0.6em; /* Increase the left offset for larger highlight layer */
+    right: -22em; /* Increase the right offset for larger highlight layer */
+  }
+}
+
+
 
 /* Styles for the about me section text */
 .custom-text-about-me {
